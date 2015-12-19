@@ -33,7 +33,9 @@ public class JobClientByCommon {
         // 设置任务类型
         myJob.setParam("time", Calendar.getInstance().getTime().toString());
         myJob.setParam("name", "xuliugen");
-        myJob.setTaskTrackerNodeGroup("xuliugen_node_taskTracker");
+        //设置执行任务的nodeGroup，如果该节点组不存在则会放入到FailStore中
+        myJob.setTaskTrackerNodeGroup("xuliugen_node_myrunner_taskTracker");
+
         //myJob.setCronExpression("0/5 * * * * ? ");  // 支持 cronExpression表达式
         // myJob.setTriggerTime(new Date()); // 支持指定时间执行
         // 如果不设置指定时间或者cron表达式，提交的就是单次实时任务

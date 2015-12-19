@@ -19,6 +19,7 @@ public class MyJobRunner implements JobRunner {
         // 取出提交的任务里面的参数来记日志
         String committer;
         try {
+            //获取JobClient中的参数name
             committer = job.getParam("name");
             System.out.println("this is " + committer);
             logger.info("the log:" + job.getParam(committer));
