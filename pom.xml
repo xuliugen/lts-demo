@@ -8,9 +8,9 @@
     <artifactId>lts-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>lts-client</module>
-        <module>lts-task</module>
-        <module>lts-dispatcher</module>
+        <module>lts-jobclient</module>
+        <module>lts-tasktracker</module>
+        <module>lts-jobtracker</module>
     </modules>
     <packaging>pom</packaging>
 
