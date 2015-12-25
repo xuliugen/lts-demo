@@ -12,12 +12,16 @@ public class TaskTrackerByMyJobRunner {
     public static void main(String[] args) {
         TaskTracker taskTracker = new TaskTracker();
         taskTracker.setJobRunnerClass(MyJobRunner.class);
-        taskTracker.setRegistryAddress("zookeeper://192.168.31.229:2181");
-        taskTracker.addConfig("lts.monitor.url", "http:/192.168.31.229:8081");
-        taskTracker.setNodeGroup("xuliugen_node_myrunner_taskTracker");
-        taskTracker.setClusterName("xuliugen_cluster");
+        taskTracker.setRegistryAddress("zookeeper://172.16.61.101:2181");
+        taskTracker.addConfig("lts.monitor.url", "http:/172.16.61.101:8081");
+        taskTracker.setNodeGroup("jhd_myrunner_taskTracker");
+        taskTracker.setClusterName("jhd_cluster");
         taskTracker.setWorkThreads(20);
-        taskTracker.start();
+        try {
+            taskTracker.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println("MyJobRunner TaskTracker 启动成功!");
     }
 }
