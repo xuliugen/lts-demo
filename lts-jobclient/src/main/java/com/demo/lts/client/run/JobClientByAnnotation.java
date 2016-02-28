@@ -20,6 +20,7 @@ import java.util.Properties;
 public class JobClientByAnnotation {
 
     public static void main(String[] args) throws Exception {
+        
         JobClient myJobClient = JobClientByAnnotation.getJobClient();
         myJobClient.start();
 
