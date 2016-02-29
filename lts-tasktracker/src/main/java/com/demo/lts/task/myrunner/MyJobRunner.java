@@ -29,5 +29,4 @@ public class MyJobRunner implements JobRunner {
         }
         return new Result(Action.EXECUTE_SUCCESS, "job executed success。committer:" + committer);
     }
-
 }

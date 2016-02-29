@@ -38,6 +38,7 @@ public class TaskTrackerCfgLoader {
         }
 
         TaskTrackerCfgBean cfg = new TaskTrackerCfgBean();
+
         try {
             String registryAddress = conf.getProperty("registryAddress");
             Assert.hasText(registryAddress, "registryAddress can not be null.");
